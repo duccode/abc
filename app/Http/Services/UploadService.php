@@ -12,7 +12,7 @@ class UploadService
 
                 $pathFull = 'images/'.date('Y/m/d');
 
-                $request->file('file')->storeAs('app/public/'.$pathFull,$name);
+                $request->file('file')->storeAs('public/'.$pathFull,$name);
                 return '/storage/'.$pathFull.'/'.$name;
 
             } catch (\Exception $error) {
